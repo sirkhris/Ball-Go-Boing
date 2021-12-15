@@ -6,7 +6,6 @@ public class PlatDynam : MonoBehaviour
 {
     public float horzSpeed = 0.0f;
     public float vertSpeed = 0.0f;
-    public float spinSpeed = 0.0f;
     public float maxDistanceX = 0.0f;
     public float maxDistanceY = 0.0f;
     Vector3 initialPosition;
@@ -42,10 +41,8 @@ public class PlatDynam : MonoBehaviour
         {
             InvertV();
         }
-
-        //rotation of platform
-        this.transform.Rotate(0, 0, spinSpeed * Time.fixedDeltaTime);
     }
+
     private void InvertH()
     {
         horzSpeed *= -1;
